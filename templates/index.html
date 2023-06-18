@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<header class="masthead text-center text-white">
+{% endblock %}
+
+{% block header_heading %}
+<h1 class="masthead-heading mb-0">YOU CAN SAVE <br> SOMEONE'S LIFE. </h1>
+{% endblock %}
+
+{%block scroll_functionality%}
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">How?</a>
+{%endblock%}
+
+{% block content %}
+<!-- Content section 1-->
+<section id="scroll">
+<div class = "main-background">
+<div class="container px-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="{% static '/assets/img/01.jpg' %}" alt="..." /></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <h2 class="display-4">What is human trafficking?</h2>
+                <p>Human trafficking is a modern-day form of slavery involving the illegal trade of people for exploitation or commercial gain. Traffickers use force, fraud, or coercion to lure their victims and force them into labor or commercial sexual exploitation. Click <a id='textlink' href="https://attorneygeneral.utah.gov/initiatives/human-trafficking/" target="_blank">here</a> to read more.</p>
+            </div></div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Content section 2-->
+<section>
+<div class = "main-background">
+<div class="container px-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="{% static '/assets/img/02.jpg' %}" alt="..." /></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="p-5">
+                <h2 class="display-4">How does it impact my community?</h2>
+                <p>Recent Utah trafficking cases included commercial sex, multi-state prostitution rings, debt bondage, illicit massage businesses, domestic servitude, labor trafficking within the agriculture and hospitality sectors, forced drug trafficking, and more. Click <a id='textlink' href="https://www.acf.hhs.gov/sites/default/files/documents/otip/utah_profile_efforts_to_combat_human_trafficking.pdf" target="_blank">here</a>  to read more about the impact in your community. </p>
+            </div></div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Content section 3-->
+<section>
+<div class = "main-background">
+<div class="container px-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="{% static '/assets/img/03.jpg' %}" alt="..." /></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <h2 class="display-4">What can I do?</h2>
+                <p>This <a id='textlink' href="https://www.rideuta.com/news/2021/01/Human-Trafficking#:~:text=BE%20THE%20ONE%20to%20SUPPORT%20victims%20of%20human%20trafficking.&text=victims%20to%20services%3A-,Contact%20the%20National%20Human%20Trafficking%20Hotline%20at%20888%2D373%2D7888,%40aau%2Dslc.org%20" target="_blank"> blog </a> will provide information on how you can BE THE ONE in Utah’s Fight Against Human Trafficking to LEARN about human trafficking, RECOGNIZE potential indicators of trafficking, REPORT suspected trafficking situations, and SUPPORT human trafficking victims.</p>
+            </div></div>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<section id="scroll">
+        <div class = "main-background">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="{% static '/assets/img/pexels-anantha-krishnan-padmanabhan-15088545.jpg' %}" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">{{person.personFullName | title}}</h2>
+                        <h6>Date Missing:</h6>
+                        <p>{{person.personDateMissing}}</p>
+                        <h6>Age Missing:</h6>
+                        <p>{{person.personAgeMissing}}</p>
+                        <h6>Home City:</h6>
+                        <p>{{person.personCity}}</p>
+                        <h6>Home State:</h6>
+                        <p>{{person.personState}}</p>
+                        <h6>{{person.personFirstName}}'s Gender:</h6>
+                        <p>{{person.personGender}}</p>
+                        <h6>{{person.personFirstName}}'s Race:</h6>
+                        <p>{{person.personRace}}</p>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

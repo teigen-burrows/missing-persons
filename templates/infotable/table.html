@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<header class="mastheadII text-center text-white">
+{% endblock %}
+
+{% block header_heading %}
+<h1 class="masthead-heading mb-0">KNOW THEIR <br> NAMES </h1>
+{% endblock %}
+
+<!-- This is where the base content is loaded and wrapped around the child content
+(wrapped, because there is a header and a footer in the base content) -->
+{% block content %}
+         <!-- Info Table -->
+         <div style="overflow-x:auto; background-color: #f0f0f0">
+            <table class="table table-bordered table-hover table-condensed" >
+                <thead>
+                    <tr>
+                        <th title="Field #0">MISSING PERSON CASES - UT || AGES 0-27<br>*for more info on each person click their date when missing*</th>
+
+                    </tr>
+                </thead>
+            </table>
+        </div>  
+         <div style="overflow-x:auto; background-color: #f0f0f0">
+            <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th title="Field #1">Date when missing</th>
+                        <th title="Field #2">Last Name</th>
+                        <th title="Field #3">First Name</th>
+                        <th title="Field #4">Age when missing</th>
+                        <th title="Field #5">City</th>
+                        <th title="Field #6">State</th>
+                        <th title="Field #7">Gender</th>
+                        <th title="Field #8">Race</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in missing_persons %}
+                    <tr>
+                        <td><a href="{% url "personView" personID=person.id %}">{{person.personDateMissing}}</a></td>
+                        <td>{{person.personFirstName | title}}</td>
+                        <td>{{person.personLastName | title}}</td>
+                        <td align="right">{{person.personAgeMissing}}</td>
+                        <td>{{person.personCity | title}}</td>
+                        <td>{{person.personState | upper}}</td>
+                        <td>{{person.personGender | upper}}</td>
+                        <td>{{person.personRace | upper}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+<br><br>
+{% endblock %}
